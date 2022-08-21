@@ -1,11 +1,11 @@
 <template>
     <div class="box">
-        <div style="margin-left:6%;">
+        <div style="margin-left:2%;">
             <router-link class="go" to="/books">
                 <i class="iconfont icon-tushu  ">收集好句</i>
             </router-link>
         </div>
-        <div style="margin-left:6%;">
+        <div style="margin-left:2%;">
             <router-link class="go" to="/technology">
                 <i class="iconfont icon-jishufuwu">相关技术</i>
             </router-link>

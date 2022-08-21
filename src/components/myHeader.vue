@@ -9,12 +9,12 @@
             <div class="related">
                 <router-link to="/" class="iconfont icon-shouye1">主页</router-link>
                 <router-link to="/article" class="iconfont icon-ziliaoku">文章</router-link>
-                <router-link to="/" class="iconfont icon-shouye1">主页</router-link>
                 <router-link to="/about" class="iconfont icon-jushou">关于</router-link>
+                <a href="http://127.0.0.1:5174/#/" class="iconfont icon-houtaiguanli-xitongguanli">后台</a>
                 <div class="search">
-                    <el-button style="margin-left: -30px;" @click="isSearch = !isSearch" size="large" icon="Search"
+                    <el-button style="margin-left: -10px;" @click="isSearch = !isSearch" size="large" icon="Search"
                         circle />
-                    <div style="position:absolute;left:86.3%;" v-show="isSearch">
+                    <div style="position:absolute;left:86.5%;" v-show="isSearch">
                         <input class="searchInput" v-model="search" placeholder="输入要搜索的内容" suffix-icon="Search" />
                         <el-button @click="sureButton" class="sureButton" text>搜索
                         </el-button>
@@ -69,7 +69,7 @@ a:hover {
 .related {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
     font-size: 1.2rem;
     margin-left: 30px;
 }
