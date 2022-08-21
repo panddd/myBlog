@@ -1,6 +1,6 @@
 <template>
     <div id="body">
-        <div class="notData">
+        <div v-show="!data.length" class="notData">
             <span>暂时没有相关数据哦</span>
         </div>
         <div class="sentence" v-for="item in data" :key="item.id" @click="open(item.id)">
@@ -19,7 +19,7 @@ export default {
     name: 'search',
     data() {
         return {
-            data: '',
+            data: [],
             page: 1,
             pageSize: 5,
         }
