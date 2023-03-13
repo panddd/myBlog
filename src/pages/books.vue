@@ -37,7 +37,7 @@
 import { page, addSentence } from '../api/books'
 export default {
     name: 'books',
-    data() {
+    data () {
         return {
             bookList: [],
             form: {},
@@ -47,27 +47,25 @@ export default {
             dialogFormVisible: false
         }
     },
-    created() {
+    created () {
         this.Load();
     },
     methods: {
-        Load() {
+        Load () {
             let obj = {
                 current: this.page,
                 size: this.pageSize,
-                name: this.name,
-                text: this.text
             }
             page(obj).then(res => {
                 this.bookList = res.data.records
                 this.total = res.data.total
             })
         },
-        add() {
+        add () {
             this.dialogFormVisible = true
             this.form = {}
         },
-        sureadd() {
+        sureadd () {
             addSentence(this.form).then(res => {
                 if (res) {
                     this.$message.success("感谢你的分享!")
@@ -79,11 +77,11 @@ export default {
                 this.Load();
             })
         },
-        handleCurrentChange(page) {
+        handleCurrentChange (page) {
             this.page = page
             this.Load()
         },
-        handleSizeChange(size) {
+        handleSizeChange (size) {
             this.pageSize = size
             this.Load()
         }
